@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NexusDesk Express Tech & Rate Hub (Home 2) — Architectural bento showcase, instant INR cost calculator, gigabit workstations, and rapid document production." />
+  <title>NexusDesk — Home 2 (Express Tech &amp; Rate Hub) | Cyber Cafe &amp; Document Center</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <!-- Custom Design System CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ====================================================================
+       MANDATORY STICKY NAVBAR
+       ==================================================================== -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-custom" aria-label="Main Navigation">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand-custom" href="index.html">
+          <span class="brand-mark"><i class="bi bi-pc-display-horizontal"></i></span>
+          <span class="brand-text-wrap">
+            <span class="brand-name">NexusDesk</span>
+            <span class="brand-tag">Digital &amp; Document Center</span>
+          </span>
+        </a>
+
+        <!-- Mobile Right Controls -->
+        <div class="d-flex align-items-center gap-2 d-lg-none">
+          <button type="button" class="btn-theme-toggle js-theme-toggle" aria-label="Switch theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarCollapse" aria-controls="mainNavbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse navbar-collapse-custom" id="mainNavbarCollapse">
+          <ul class="navbar-nav mx-auto">
+            <!-- 1. Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="home-2.html" id="homeDropdown" role="button" aria-expanded="false">
+                <span>Home</span>
+                <i class="bi bi-chevron-down dropdown-chevron"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                <li>
+                  <a class="dropdown-item" href="index.html">
+                    <div>
+                      <span>Home 1 — Digital Service Center</span>
+                      <span class="dropdown-item-desc">Classic workstation, print &amp; form hub</span>
+                    </div>
+                    <i class="bi bi-arrow-right-short fs-5"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item active" href="home-2.html">
+                    <div>
+                      <span>Home 2 — Express Tech &amp; Rate Hub</span>
+                      <span class="dropdown-item-desc">Bento showcase &amp; instant cost estimator</span>
+                    </div>
+                    <i class="bi bi-arrow-right-short fs-5"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- 2. Services -->
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+
+            <!-- 3. Rates -->
+            <li class="nav-item">
+              <a class="nav-link" href="rates.html">Rates</a>
+            </li>
+
+            <!-- 4. About -->
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <!-- 5. Contact -->
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Desktop Theme Toggle + CTA -->
+          <div class="d-none d-lg-flex align-items-center gap-2">
+            <button type="button" class="btn-theme-toggle js-theme-toggle" aria-label="Switch theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <a href="contact.html" class="btn-brand">
+              <span>Get in Touch</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+          </div>
+
+          <!-- Mobile CTA -->
+          <div class="navbar-actions-mobile d-lg-none">
+            <a href="contact.html" class="btn-brand w-100">
+              <span>Get in Touch</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==================================================================
+         1. ALTERNATIVE TECH-FORWARD HERO (HOME 2)
+         ================================================================== -->
+    <section class="hero-home-2">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- Left Column: High-Impact Tech Editorial Copy -->
+          <div class="col-lg-7">
+            <div class="eyebrow-badge eyebrow-on-navy">
+              <span class="status-dot"></span>
+              <span class="font-mono">TERMINAL HUB v2.6 • MG ROAD BENGALURU</span>
+            </div>
+            <h1 class="display-title mb-3">
+              Next-Generation Digital Access, Instant Print &amp; Portal Desk.
+            </h1>
+            <p class="section-subtitle mb-4" style="color: #CBD5E1;">
+              Engineered for zero downtime. Access 1 Gbps fiber computers, send documents directly from your phone to our 1200-DPI laser printers, or complete complex online applications with trained documentation specialists.
+            </p>
+
+            <!-- Hero CTAs -->
+            <div class="d-flex flex-wrap align-items-center gap-3 mb-5">
+              <a href="#instant-pricing-preview" class="btn-brand btn-brand-lg">
+                <i class="bi bi-calculator-fill"></i>
+                <span>Instant Cost Calculator</span>
+              </a>
+              <a href="services.html" class="btn-on-navy-outline btn-brand-lg">
+                <span>Browse All Services</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- Technical Metric Strip -->
+            <div class="row g-3 pt-3 border-top" style="border-color: rgba(255,255,255,0.12) !important;">
+              <div class="col-6 col-sm-3">
+                <div class="font-mono fs-4 fw-bold text-info">1 Gbps</div>
+                <div class="small" style="color: #94A3B8;">Dual-ISP Fiber</div>
+              </div>
+              <div class="col-6 col-sm-3">
+                <div class="font-mono fs-4 fw-bold text-info">60 PPM</div>
+                <div class="small" style="color: #94A3B8;">Duplex Laser Print</div>
+              </div>
+              <div class="col-6 col-sm-3">
+                <div class="font-mono fs-4 fw-bold text-info">600 DPI</div>
+                <div class="small" style="color: #94A3B8;">ADF Batch Scanner</div>
+              </div>
+              <div class="col-6 col-sm-3">
+                <div class="font-mono fs-4 fw-bold text-info">₹25/hr</div>
+                <div class="small" style="color: #94A3B8;">PC Workstation</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Live Center Capabilities & Express Rate Terminal -->
+          <div class="col-lg-5">
+            <div class="tech-terminal-card">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span style="background-color: #EF4444;"></span>
+                  <span style="background-color: #F59E0B;"></span>
+                  <span style="background-color: #10B981;"></span>
+                </div>
+                <span class="font-mono small text-info">EXPRESS RATE &amp; DESK MONITOR</span>
+              </div>
+
+              <!-- Quick Rate Matrix inside Hero -->
+              <div class="d-flex flex-column gap-2 mb-4">
+                <div class="p-3 rounded-3 d-flex align-items-center justify-content-between" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);">
+                  <div>
+                    <div class="fw-bold small text-white"><i class="bi bi-pc-display text-info me-2"></i>High-Speed PC Browsing</div>
+                    <div style="font-size: 0.76rem; color: #94A3B8;">Win 11 Pro • MS Office • Auto-Wipe</div>
+                  </div>
+                  <span class="font-mono fw-bold text-info">₹25 / hr</span>
+                </div>
+
+                <div class="p-3 rounded-3 d-flex align-items-center justify-content-between" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);">
+                  <div>
+                    <div class="fw-bold small text-white"><i class="bi bi-printer text-info me-2"></i>B&amp;W / Color Laser Print</div>
+                    <div style="font-size: 0.76rem; color: #94A3B8;">A4 75–100 GSM • Bulk ₹2/pg</div>
+                  </div>
+                  <span class="font-mono fw-bold text-info">₹3 / ₹10</span>
+                </div>
+
+                <div class="p-3 rounded-3 d-flex align-items-center justify-content-between" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);">
+                  <div>
+                    <div class="fw-bold small text-white"><i class="bi bi-upc-scan text-info me-2"></i>Document Scan &amp; Resize</div>
+                    <div style="font-size: 0.76rem; color: #94A3B8;">PDF/JPG • Exact KB Portal Crop</div>
+                  </div>
+                  <span class="font-mono fw-bold text-info">₹10 / pg</span>
+                </div>
+
+                <div class="p-3 rounded-3 d-flex align-items-center justify-content-between" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);">
+                  <div>
+                    <div class="fw-bold small text-white"><i class="bi bi-person-workspace text-info me-2"></i>Assisted Form Filling</div>
+                    <div style="font-size: 0.76rem; color: #94A3B8;">Exams, Admissions, Jobs &amp; IDs</div>
+                  </div>
+                  <span class="font-mono fw-bold text-info">₹50+</span>
+                </div>
+              </div>
+
+              <!-- Express File Drop Action -->
+              <div class="p-3 rounded-3 mb-3" style="background: rgba(6, 182, 212, 0.12); border: 1px solid rgba(6, 182, 212, 0.3);">
+                <div class="small fw-semibold text-white mb-1">
+                  <i class="bi bi-lightning-charge-fill text-info me-1"></i> Walk-In Print Queue Active
+                </div>
+                <div style="font-size: 0.78rem; color: #CBD5E1;">
+                  Forward your PDF on WhatsApp and collect printed pages in under 2 minutes.
+                </div>
+              </div>
+
+              <div class="d-grid gap-2 d-sm-flex">
+                <a href="https://wa.me/919876543210" data-config="whatsapp" class="btn-whatsapp flex-grow-1">
+                  <i class="bi bi-whatsapp"></i>
+                  <span>WhatsApp Print Desk</span>
+                </a>
+                <a href="rates.html" class="btn-on-navy-outline">
+                  <span>Full Rate Card</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         2. DISTINCT BENTO-GRID SERVICE ARCHITECTURE (HOME 2)
+         ================================================================== -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row align-items-end justify-content-between mb-5 g-3">
+          <div class="col-lg-7">
+            <span class="eyebrow-badge font-mono">01 // SERVICE ARCHITECTURE</span>
+            <h2 class="section-title mb-2">Three Specialized Zones, One Integrated Digital Center</h2>
+            <p class="section-subtitle mb-0">
+              Unlike cramped traditional shops, our floor plan is divided into dedicated zones for quiet computing, rapid document production, and 1-on-1 application assistance.
+            </p>
+          </div>
+          <div class="col-lg-auto">
+            <a href="services.html" class="btn-outline-brand">
+              <span>Explore Complete Service Catalog</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bento Row 1: 7 Col + 5 Col -->
+        <div class="row g-4 mb-4">
+          <div class="col-lg-7 js-reveal">
+            <div class="bento-card d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                  <span class="eyebrow-badge mb-0">ZONE A • WORKSTATION BAY</span>
+                  <span class="font-mono small fw-bold text-primary">24 Ergonomic Terminals</span>
+                </div>
+                <h3 class="h3 fw-bold mb-2">High-Speed Computer Access &amp; Private Workbays</h3>
+                <p class="mb-4">
+                  Each workstation features an Intel Core i5/i7 processor, 24-inch Full HD IPS monitor, acoustic partitions, and gigabit ethernet. Engineered for online exams, cloud work, email correspondence, and research.
+                </p>
+                <div class="row g-2 mb-4">
+                  <div class="col-sm-6">
+                    <div class="p-2 px-3 rounded-3 bg-surface-alt small fw-semibold">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i>Windows 11 + MS Office 2024
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="p-2 px-3 rounded-3 bg-surface-alt small fw-semibold">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i>HD Webcam &amp; Mic Headsets
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="p-2 px-3 rounded-3 bg-surface-alt small fw-semibold">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i>Auto-Wipe Privacy Protection
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="p-2 px-3 rounded-3 bg-surface-alt small fw-semibold">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i>Direct Terminal-to-Printer Link
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row align-items-center g-3 pt-3 border-top" style="border-color: var(--border-color) !important;">
+                <div class="col-sm-7">
+                  <img
+                    src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
+                    alt="Digital workstation technology display"
+                    class="rounded-3 w-100"
+                    style="height: 145px; object-fit: cover;"
+                  />
+                </div>
+                <div class="col-sm-5 text-sm-end">
+                  <div class="small text-muted mb-1">Standard Access Rate</div>
+                  <div class="font-mono h4 fw-bold text-primary mb-2">₹25 <span class="fs-6 text-muted">/ Hour</span></div>
+                  <a href="services.html#internet-services" class="btn-brand w-100">View Specs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 js-reveal">
+            <div class="bento-card bento-dark d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <span class="eyebrow-badge eyebrow-on-navy mb-0">ZONE B • FORM DESK</span>
+                  <span class="font-mono small text-info">Dual-Monitor Setup</span>
+                </div>
+                <h3 class="h3 fw-bold mb-2">1-on-1 Guided Online Application Assistance</h3>
+                <p class="small mb-4">
+                  Sit at our dual-screen customer verification counter. As our specialist fills out your form, crops your photo/signature, and uploads PDFs, you watch and verify every character in real time on a facing monitor.
+                </p>
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                  <span class="badge rounded-pill bg-info bg-opacity-10 text-info border border-info border-opacity-25 px-3 py-2">University Admissions</span>
+                  <span class="badge rounded-pill bg-info bg-opacity-10 text-info border border-info border-opacity-25 px-3 py-2">Competitive Exams</span>
+                  <span class="badge rounded-pill bg-info bg-opacity-10 text-info border border-info border-opacity-25 px-3 py-2">Job Portals</span>
+                  <span class="badge rounded-pill bg-info bg-opacity-10 text-info border border-info border-opacity-25 px-3 py-2">Citizen Services</span>
+                  <span class="badge rounded-pill bg-info bg-opacity-10 text-info border border-info border-opacity-25 px-3 py-2">Resume Support</span>
+                </div>
+              </div>
+
+              <div class="p-3 rounded-3" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <span class="small text-white fw-semibold">Operator Assistance Charge</span>
+                  <span class="font-mono fw-bold text-info">From ₹50 / Form</span>
+                </div>
+                <a href="services.html#application-services" class="btn-on-navy-outline w-100 btn-sm py-2">
+                  <span>Explore Application Services</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Row 2: 4 Col + 4 Col + 4 Col (Print, Scan, PDF Studio) -->
+        <div class="row g-4">
+          <div class="col-md-4 js-reveal">
+            <div class="bento-card">
+              <div class="icon-box"><i class="bi bi-printer-fill"></i></div>
+              <span class="font-mono small text-muted d-block mb-1">ZONE C.1 // LASER OUTPUT</span>
+              <h3 class="h5 fw-bold">B&amp;W &amp; Color Laser Printing</h3>
+              <p class="small">
+                Print from USB, email, or WhatsApp. Available in 75 GSM everyday paper, 100 GSM bond, glossy photo sheets, and 250 GSM certificate cardstock.
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top" style="border-color: var(--border-color) !important;">
+                <span class="font-mono small fw-bold text-primary">₹3 B&amp;W • ₹10 Color</span>
+                <a href="services.html#printing-services" class="small fw-semibold">Details <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 js-reveal">
+            <div class="bento-card">
+              <div class="icon-box icon-cyan"><i class="bi bi-files"></i></div>
+              <span class="font-mono small text-muted d-block mb-1">ZONE C.2 // HIGH-VOLUME XEROX</span>
+              <h3 class="h5 fw-bold">Duplex Photocopying</h3>
+              <p class="small">
+                High-speed 60-PPM copying for textbooks, legal dockets, notes, and ID cards. Special discounted per-page slabs for 100+ page batches.
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top" style="border-color: var(--border-color) !important;">
+                <span class="font-mono small fw-bold text-primary">₹2 Single • ₹1.50 Bulk</span>
+                <a href="services.html#printing-services" class="small fw-semibold">Details <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 js-reveal">
+            <div class="bento-card">
+              <div class="icon-box"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+              <span class="font-mono small text-muted d-block mb-1">ZONE C.3 // DIGITAL STUDIO</span>
+              <h3 class="h5 fw-bold">Scanning &amp; PDF Formatting</h3>
+              <p class="small">
+                Flatbed &amp; ADF multi-page scanning, OCR text recognition, Word-to-PDF conversion, page merging, and professional document formatting.
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top" style="border-color: var(--border-color) !important;">
+                <span class="font-mono small fw-bold text-primary">₹10 Scan • ₹15 PDF</span>
+                <a href="services.html#printing-services" class="small fw-semibold">Details <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         3. VISUALLY PROMINENT PRICING PREVIEW & INTERACTIVE CALCULATOR
+         ================================================================== -->
+    <section id="instant-pricing-preview" class="section-padding bg-surface-alt">
+      <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+          <span class="eyebrow-badge font-mono"><i class="bi bi-currency-rupee"></i> 02 // TRANSPARENT INR PRICING</span>
+          <h2 class="section-title">Instant Rate Preview &amp; Visit Cost Estimator</h2>
+          <p class="section-subtitle mx-auto">
+            Preview our most popular service rates or use the interactive calculator below to estimate your exact cost in Indian Rupees (₹) before walking in.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- Left: Quick Rate Board -->
+          <div class="col-lg-6 js-reveal">
+            <div class="pricing-category-card popular-category h-100">
+              <div class="pricing-card-header">
+                <div>
+                  <h3 class="h5 fw-bold mb-1">Most Requested Counter Rates</h3>
+                  <p class="small text-muted mb-0">Standard walk-in rates (INR ₹)</p>
+                </div>
+                <span class="popular-badge">Quick Reference</span>
+              </div>
+              <ul class="rate-table-list">
+                <li class="rate-row">
+                  <div>
+                    <span class="rate-item-title">High-Speed Internet Browsing</span>
+                    <span class="rate-item-note">30 Mins: ₹15 • Full Hour: ₹25 • 2 Hours: ₹45</span>
+                  </div>
+                  <span class="rate-price-badge">₹25 <span class="rate-unit">/ hr</span></span>
+                </li>
+                <li class="rate-row rate-featured">
+                  <div>
+                    <span class="rate-item-title">Black &amp; White Laser Print (A4)</span>
+                    <span class="rate-item-note">Single side ₹3 • Duplex ₹4 • Bulk 50+ pages ₹2/pg</span>
+                  </div>
+                  <span class="rate-price-badge">₹3 <span class="rate-unit">/ page</span></span>
+                </li>
+                <li class="rate-row">
+                  <div>
+                    <span class="rate-item-title">Color Laser Print (A4)</span>
+                    <span class="rate-item-note">Standard text/chart ₹10 • Full graphic/photo ₹15–₹30</span>
+                  </div>
+                  <span class="rate-price-badge">₹10 <span class="rate-unit">/ page</span></span>
+                </li>
+                <li class="rate-row">
+                  <div>
+                    <span class="rate-item-title">Photocopying / Xerox (A4 B&amp;W)</span>
+                    <span class="rate-item-note">Single side ₹2 • Duplex ₹3 • Bulk 100+ pages ₹1.50/pg</span>
+                  </div>
+                  <span class="rate-price-badge">₹2 <span class="rate-unit">/ page</span></span>
+                </li>
+                <li class="rate-row">
+                  <div>
+                    <span class="rate-item-title">Document Scanning &amp; PDF Creation</span>
+                    <span class="rate-item-note">Standard scan ₹10/pg • Bulk ADF 10+ pages ₹5/pg</span>
+                  </div>
+                  <span class="rate-price-badge">₹10 <span class="rate-unit">/ page</span></span>
+                </li>
+                <li class="rate-row">
+                  <div>
+                    <span class="rate-item-title">Online Form &amp; Application Assistance</span>
+                    <span class="rate-item-note">Basic portal entry ₹50 • Standard exam/job form ₹80–₹100</span>
+                  </div>
+                  <span class="rate-price-badge">₹50+ <span class="rate-unit">/ form</span></span>
+                </li>
+              </ul>
+              <div class="p-4 bg-surface-alt border-top d-flex flex-wrap align-items-center justify-content-between gap-2" style="border-color: var(--border-color) !important;">
+                <span class="small text-muted">Need A3, thesis binding, or bulk quotes?</span>
+                <a href="rates.html" class="btn-outline-brand btn-sm">
+                  <span>View All 8 Rate Tables</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Visit Cost Estimator -->
+          <div class="col-lg-6 js-reveal">
+            <div class="estimator-panel h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div>
+                    <span class="eyebrow-badge eyebrow-cyan mb-1"><i class="bi bi-sliders"></i> Interactive Tool</span>
+                    <h3 class="h4 fw-bold mb-0">Estimate Your Visit Cost</h3>
+                  </div>
+                  <button type="button" id="calcResetBtn" class="btn-outline-brand btn-sm py-1 px-2 small">
+                    <i class="bi bi-arrow-counterclockwise"></i> Reset
+                  </button>
+                </div>
+                <p class="small mb-4">
+                  Enter your required quantities below to compute an instant sample estimate. (Bulk B&amp;W print discount of ₹2/page automatically applies at 50+ pages!)
+                </p>
+
+                <form id="rateEstimatorForm" onsubmit="return false;">
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label for="calcInternetHrs" class="form-label-custom">Internet Browsing (Hours @ ₹25)</label>
+                      <input type="number" id="calcInternetHrs" class="form-control-custom js-calc-input" min="0" max="100" value="1" data-default="1" data-rate="25" data-label="Internet (hr)" />
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="calcBwPages" class="form-label-custom">B&amp;W Print Pages (@ ₹3, 50+ @ ₹2)</label>
+                      <input type="number" id="calcBwPages" class="form-control-custom js-calc-input" min="0" max="5000" value="10" data-default="10" data-rate="3" data-label="B&W Print" />
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="calcColorPages" class="form-label-custom">Color Print Pages (@ ₹10/page)</label>
+                      <input type="number" id="calcColorPages" class="form-control-custom js-calc-input" min="0" max="1000" value="0" data-default="0" data-rate="10" data-label="Color Print" />
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="calcXeroxPages" class="form-label-custom">Photocopy / Xerox Pages (@ ₹2)</label>
+                      <input type="number" id="calcXeroxPages" class="form-control-custom js-calc-input" min="0" max="5000" value="0" data-default="0" data-rate="2" data-label="Photocopy" />
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="calcScanPages" class="form-label-custom">Document Scan Pages (@ ₹10)</label>
+                      <input type="number" id="calcScanPages" class="form-control-custom js-calc-input" min="0" max="500" value="2" data-default="2" data-rate="10" data-label="Doc Scan" />
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="calcFormsCount" class="form-label-custom">Assisted Online Forms (@ ₹80)</label>
+                      <input type="number" id="calcFormsCount" class="form-control-custom js-calc-input" min="0" max="20" value="0" data-default="0" data-rate="80" data-label="Form Assistance" />
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Live Total Output Box -->
+              <div class="p-4 rounded-4 bg-navy mt-4">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
+                  <span class="small text-uppercase font-mono" style="color: #94A3B8;">Estimated Service Total</span>
+                  <span id="calcTotalAmount" class="font-mono h2 fw-bold text-info mb-0">₹75</span>
+                </div>
+                <p id="calcBreakdownText" class="small mb-3" style="color: #CBD5E1; font-size: 0.8rem;">
+                  Internet (hr) (×1): ₹25 • B&amp;W Print (×10): ₹30 • Doc Scan (×2): ₹20
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <a href="https://wa.me/919876543210" id="calcWhatsappBtn" target="_blank" rel="noopener noreferrer" class="btn-whatsapp btn-sm flex-grow-1">
+                    <i class="bi bi-whatsapp"></i>
+                    <span>Send Estimate to Desk</span>
+                  </a>
+                  <a href="contact.html" class="btn-on-navy-outline btn-sm">
+                    <span>Enquire Now</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         4. WHO WE SERVE — AUDIENCE WORKFLOW CARDS
+         ================================================================== -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row align-items-end justify-content-between mb-5 g-3">
+          <div class="col-lg-7">
+            <span class="eyebrow-badge font-mono">03 // TAILORED WORKFLOWS</span>
+            <h2 class="section-title mb-2">Built Around Daily Academic, Career &amp; Citizen Needs</h2>
+          </div>
+          <div class="col-lg-auto">
+            <a href="about.html" class="btn-outline-brand">
+              <span>Learn About Our Facility</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 js-reveal">
+            <div class="surface-card">
+              <div class="font-mono small fw-bold text-primary mb-2">01 / STUDENTS</div>
+              <h3 class="h5 fw-bold">Students &amp; College Applicants</h3>
+              <p class="small mb-3">
+                University admission portals, scholarship uploads, dissertation laser printing, project chart prints, and bulk lecture note photocopying.
+              </p>
+              <a href="services.html#application-services" class="small fw-semibold">Student Services <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 js-reveal">
+            <div class="surface-card">
+              <div class="font-mono small fw-bold text-primary mb-2">02 / JOB SEEKERS</div>
+              <h3 class="h5 fw-bold">Job Seekers &amp; Exam Candidates</h3>
+              <p class="small mb-3">
+                Error-free competitive exam registrations, exact photo/signature KB cropping, ATS-friendly resume formatting, and admit card printing.
+              </p>
+              <a href="services.html#application-services" class="small fw-semibold">Career Support <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 js-reveal">
+            <div class="surface-card">
+              <div class="font-mono small fw-bold text-primary mb-2">03 / PROFESSIONALS</div>
+              <h3 class="h5 fw-bold">Working Professionals &amp; Businesses</h3>
+              <p class="small mb-3">
+                Quiet gigabit workstations with UPS backup, contract scanning to searchable PDF, pitch-deck color printing, and invoice batch printing.
+              </p>
+              <a href="services.html#internet-services" class="small fw-semibold">Workstation Access <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 js-reveal">
+            <div class="surface-card">
+              <div class="font-mono small fw-bold text-primary mb-2">04 / CITIZENS</div>
+              <h3 class="h5 fw-bold">Online Citizen Portal Assistance</h3>
+              <p class="small mb-3">
+                Patient, step-by-step operator support for online utility applications, appointment slot bookings, document scanning, and e-card downloads.
+              </p>
+              <a href="services.html#application-services" class="small fw-semibold">Portal Assistance <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         5. ALTERNATIVE LOCATION & EXPRESS DISPATCH COMMAND BAR
+         ================================================================== -->
+    <section class="section-padding-sm bg-surface-alt border-top" style="border-color: var(--border-color) !important;">
+      <div class="container">
+        <div class="p-4 p-lg-5 rounded-4 bg-navy">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <span class="eyebrow-badge eyebrow-on-navy"><i class="bi bi-broadcast"></i> Walk-In or Send Remotely</span>
+              <h2 class="section-title mb-2">Ready to Visit or Send a File for Instant Printing?</h2>
+              <p class="mb-3">
+                <strong>Address:</strong> Shop No. 14 &amp; 15, Ground Floor, Metro Plaza Commercial Complex, MG Road, Bengaluru 560001<br />
+                <strong>Hours:</strong> Mon–Sat: 08:00 AM – 09:30 PM &nbsp;|&nbsp; Sun: 09:30 AM – 06:00 PM
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="https://wa.me/919876543210" data-config="whatsapp" class="btn-whatsapp">
+                  <i class="bi bi-whatsapp"></i>
+                  <span>WhatsApp: +91 98765 43210</span>
+                </a>
+                <a href="tel:+919876543210" data-config="phone" class="btn-on-navy-outline">
+                  <i class="bi bi-telephone-fill"></i>
+                  <span>Call Desk</span>
+                </a>
+                <a href="https://www.google.com/maps/search/?api=1&query=MG+Road+Bengaluru+Karnataka+560001" data-config="directions" class="btn-on-navy-outline">
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <span>Google Maps Route</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="p-4 rounded-4" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14);">
+                <h3 class="h5 fw-bold mb-2">Express WhatsApp Print Protocol</h3>
+                <ol class="small mb-3 ps-3" style="color: #CBD5E1;">
+                  <li class="mb-1">Send your PDF or Word file to our WhatsApp desk number.</li>
+                  <li class="mb-1">Mention B&amp;W or Color, single/double side, and number of copies.</li>
+                  <li>Walk in, verify your printed pages at Counter 1, and pay via UPI or Cash.</li>
+                </ol>
+                <a href="contact.html" class="btn-brand w-100">
+                  <span>Open Contact &amp; Enquiry Form</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       PROFESSIONAL MULTI-COLUMN FOOTER
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 pb-4">
+        <div class="col-lg-4 col-md-6">
+          <a class="d-inline-flex align-items-center gap-2 text-decoration-none mb-3" href="index.html">
+            <span class="brand-mark"><i class="bi bi-pc-display-horizontal"></i></span>
+            <span class="brand-text-wrap">
+              <span class="brand-name text-white">NexusDesk</span>
+              <span class="brand-tag">Digital &amp; Document Center</span>
+            </span>
+          </a>
+          <p class="small mb-4" style="color: #94A3B8; max-width: 340px;">
+            Your neighborhood technology and documentation partner for high-speed internet workstations, laser printing, scanning, photocopying, and guided online form filling.
+          </p>
+          <div class="d-flex align-items-center gap-2">
+            <a href="https://wa.me/919876543210" data-config="whatsapp" class="social-icon-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="contact.html#map-section" class="social-icon-btn" aria-label="Google Maps Location"><i class="bi bi-geo-alt-fill"></i></a>
+            <a href="mailto:desk@nexusdesk-center.in" data-config="email" class="social-icon-btn" aria-label="Email Us"><i class="bi bi-envelope-fill"></i></a>
+            <a href="tel:+919876543210" data-config="phone" class="social-icon-btn" aria-label="Call Us"><i class="bi bi-telephone-fill"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right small"></i> Home 1 (Default)</a></li>
+            <li><a href="home-2.html"><i class="bi bi-chevron-right small"></i> Home 2 (Tech Hub)</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right small"></i> All Services</a></li>
+            <li><a href="rates.html"><i class="bi bi-chevron-right small"></i> Rate Card (INR)</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right small"></i> About Center</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right small"></i> Contact &amp; Map</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5>Core Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html#internet-services"><i class="bi bi-chevron-right small"></i> High-Speed Internet Access</a></li>
+            <li><a href="services.html#printing-services"><i class="bi bi-chevron-right small"></i> B&amp;W &amp; Color Laser Print</a></li>
+            <li><a href="services.html#printing-services"><i class="bi bi-chevron-right small"></i> Bulk Photocopying (Xerox)</a></li>
+            <li><a href="services.html#printing-services"><i class="bi bi-chevron-right small"></i> High-DPI Document Scan</a></li>
+            <li><a href="services.html#application-services"><i class="bi bi-chevron-right small"></i> Online Form Filling Desk</a></li>
+            <li><a href="services.html#application-services"><i class="bi bi-chevron-right small"></i> Exam &amp; Job Registrations</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Center Location</h5>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Shop 14 &amp; 15, Ground Floor, Metro Plaza Complex, MG Road, Bengaluru 560001</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <a href="tel:+919876543210" data-config="phone">+91 98765 43210</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <a href="mailto:desk@nexusdesk-center.in" data-config="email">desk@nexusdesk-center.in</a>
+          </div>
+          <div class="footer-contact-item mb-0">
+            <i class="bi bi-clock-fill"></i>
+            <span>Mon–Sat: 8:00 AM – 9:30 PM<br />Sun: 9:30 AM – 6:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer">
+        <strong>Independent Service Center Disclaimer:</strong> NexusDesk Digital &amp; Document Center is a privately operated commercial internet, printing, and documentation assistance facility. We do not represent, and are not affiliated with, any government authority, examination board, or official agency. All service charges listed are solely for computer access, printing, scanning, and operator typing support.
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between pt-4 mt-4 border-top" style="border-color: rgba(255,255,255,0.08) !important; font-size: 0.85rem; color: #64748B;">
+        <div>&copy; 2026 NexusDesk Digital &amp; Document Center. All rights reserved.</div>
+        <div class="mt-2 mt-sm-0">
+          <a href="rates.html" class="text-secondary me-3">Transparent Rates</a>
+          <a href="contact.html" class="text-secondary">Directions &amp; Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top js-back-to-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5.3 JS Bundle + GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
