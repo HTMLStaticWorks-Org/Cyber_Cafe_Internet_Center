@@ -23,9 +23,10 @@ const SITE_CONFIG = {
   "use strict";
 
   /* ========================================================================
-     1. Theme Engine (Light / Dark Mode with localStorage persistence)
+     1. Theme & Direction Engine (Light/Dark + RTL with localStorage)
      ======================================================================== */
   const THEME_STORAGE_KEY = "nexusdesk_theme_pref";
+  const DIRECTION_STORAGE_KEY = "nexusdesk_direction_pref";
 
   function getSavedTheme() {
     try {
@@ -64,18 +65,62 @@ const SITE_CONFIG = {
     });
   }
 
+  function getSavedDirection() {
+    try {
+      const saved = localStorage.getItem(DIRECTION_STORAGE_KEY);
+      if (saved === "rtl" || saved === "ltr") {
+        return saved;
+      }
+    } catch (e) {
+      // Ignore
+    }
+    return "ltr";
+  }
+
+  function applyDirection(dir) {
+    document.documentElement.setAttribute("dir", dir);
+    try {
+      localStorage.setItem(DIRECTION_STORAGE_KEY, dir);
+    } catch (e) {
+      // Ignore
+    }
+
+    const rtlToggles = document.querySelectorAll(".js-rtl-toggle");
+    rtlToggles.forEach((btn) => {
+      btn.classList.toggle("active", dir === "rtl");
+      btn.setAttribute(
+        "aria-label",
+        dir === "rtl" ? "Switch to LTR text direction" : "Switch to RTL text direction"
+      );
+      btn.setAttribute(
+        "title",
+        dir === "rtl" ? "Switch to LTR layout" : "Switch to RTL layout"
+      );
+    });
+  }
+
   // Apply immediately on script load
   applyTheme(getSavedTheme());
+  applyDirection(getSavedDirection());
 
   document.addEventListener("DOMContentLoaded", () => {
     // Re-sync toggle buttons after DOM ready
     applyTheme(getSavedTheme());
+    applyDirection(getSavedDirection());
 
     document.querySelectorAll(".js-theme-toggle").forEach((btn) => {
       btn.addEventListener("click", () => {
         const current = document.documentElement.getAttribute("data-theme") || "light";
         const next = current === "dark" ? "light" : "dark";
         applyTheme(next);
+      });
+    });
+
+    document.querySelectorAll(".js-rtl-toggle").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const current = document.documentElement.getAttribute("dir") || "ltr";
+        const next = current === "rtl" ? "ltr" : "rtl";
+        applyDirection(next);
       });
     });
 
@@ -105,18 +150,25 @@ const SITE_CONFIG = {
     });
 
     /* ======================================================================
-       3. Sticky Header, Desktop Hover+Click Dropdown & Mobile Navbar
+       3. Navbar Coming Down While Scrolling, Hover+Click Dropdown & Mobile Navbar
        ====================================================================== */
     const header = document.querySelector(".site-header");
     const backToTopBtn = document.querySelector(".js-back-to-top");
+    let isNavbarScrolled = false;
 
     function handleScroll() {
-      const scrollY = window.scrollY || window.pageYOffset;
+      const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
       if (header) {
-        header.classList.toggle("scrolled", scrollY > 16);
+        if (scrollY > 30 && !isNavbarScrolled) {
+          isNavbarScrolled = true;
+          header.classList.add("scrolled");
+        } else if (scrollY <= 10 && isNavbarScrolled) {
+          isNavbarScrolled = false;
+          header.classList.remove("scrolled");
+        }
       }
       if (backToTopBtn) {
-        backToTopBtn.classList.toggle("visible", scrollY > 360);
+        backToTopBtn.classList.toggle("visible", scrollY > 320);
       }
     }
 
@@ -129,7 +181,7 @@ const SITE_CONFIG = {
       });
     }
 
-    // Desktop Hover + Click Dropdown harmonization
+    // Desktop Hover + Click Dropdown harmonization (>= 1200px)
     const dropdownItems = document.querySelectorAll(".navbar-custom .nav-item.dropdown");
     dropdownItems.forEach((item) => {
       const toggle = item.querySelector(".dropdown-toggle");
@@ -160,7 +212,7 @@ const SITE_CONFIG = {
 
       // On desktop, also support hover cleanly
       item.addEventListener("mouseenter", () => {
-        if (window.innerWidth >= 992) {
+        if (window.innerWidth >= 1200) {
           menu.classList.add("show");
           item.classList.add("show");
           toggle.setAttribute("aria-expanded", "true");
@@ -168,7 +220,7 @@ const SITE_CONFIG = {
       });
 
       item.addEventListener("mouseleave", () => {
-        if (window.innerWidth >= 992) {
+        if (window.innerWidth >= 1200) {
           menu.classList.remove("show");
           item.classList.remove("show");
           toggle.setAttribute("aria-expanded", "false");

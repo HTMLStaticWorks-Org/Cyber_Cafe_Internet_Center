@@ -34,6 +34,14 @@
   --accent-warning: #F59E0B;
   --accent-warning-soft: rgba(245, 158, 11, 0.14);
 
+  /* Footer Colors - White in Light Mode */
+  --bg-footer: #FFFFFF;
+  --text-footer-primary: #0A1628;
+  --text-footer-secondary: #475569;
+  --text-footer-muted: #64748B;
+  --border-footer: #E2E8F0;
+  --bg-footer-disclaimer: #F8FAFC;
+
   /* Borders & Dividers */
   --border-color: #E2E8F0;
   --border-strong: #CBD5E1;
@@ -50,6 +58,9 @@
   --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+
+  /* Header Dimensions */
+  --header-height: 72px;
 
   /* 4px / 8px Spacing System & Radii */
   --space-1: 0.25rem;  /* 4px */
@@ -99,6 +110,14 @@
   --accent-warning: #FBBF24;
   --accent-warning-soft: rgba(251, 191, 36, 0.16);
 
+  /* Footer Colors - Dark Navy in Dark Mode */
+  --bg-footer: #040912;
+  --text-footer-primary: #FFFFFF;
+  --text-footer-secondary: #CBD5E1;
+  --text-footer-muted: #94A3B8;
+  --border-footer: rgba(255, 255, 255, 0.08);
+  --bg-footer-disclaimer: rgba(255, 255, 255, 0.04);
+
   --border-color: #1E304C;
   --border-strong: #2C446B;
   --border-accent: rgba(59, 130, 246, 0.4);
@@ -123,7 +142,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 88px;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -135,7 +154,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
+  padding-top: var(--header-height, 72px);
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
@@ -296,18 +316,35 @@ img {
    3. Mandatory Sticky Navbar & Dropdown System
    ========================================================================== */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 1030;
-  background-color: var(--bg-glass);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background-color: var(--bg-surface);
   border-bottom: 1px solid var(--border-color);
   transition: background-color var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
 }
 
 .site-header.scrolled {
-  box-shadow: var(--shadow-navbar);
+  background-color: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(10, 22, 40, 0.08);
+  border-bottom-color: var(--border-strong);
+  animation: navbarComeDown 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes navbarComeDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .navbar-custom {
@@ -414,8 +451,8 @@ img {
   margin-top: 0.35rem;
 }
 
-/* Desktop Hover + Click Support */
-@media (min-width: 992px) {
+/* Desktop Hover + Click Support (Screens above 1024px) */
+@media (min-width: 1200px) {
   .navbar-custom .nav-item.dropdown:hover > .dropdown-menu {
     display: block;
     margin-top: 0;
@@ -456,7 +493,7 @@ img {
   margin-top: 2px;
 }
 
-/* Theme Toggle Button */
+/* Theme Toggle & RTL Button (Same styling) */
 .btn-theme-toggle {
   width: 40px;
   height: 40px;
@@ -471,12 +508,29 @@ img {
   cursor: pointer;
   transition: all var(--transition-fast);
   flex-shrink: 0;
+  text-decoration: none;
 }
 
 .btn-theme-toggle:hover {
   border-color: var(--accent-primary);
   color: var(--accent-primary);
   background-color: var(--accent-primary-soft);
+}
+
+/* RTL Toggle Button with same style, typography optimized for 'RTL' text */
+.btn-theme-toggle.js-rtl-toggle {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.btn-theme-toggle.js-rtl-toggle.active {
+  background-color: var(--accent-primary-soft);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
 }
 
 /* Hamburger button */
@@ -499,12 +553,13 @@ img {
   border-color: var(--accent-primary);
 }
 
-@media (max-width: 991.98px) {
+/* Mobile & Tab Navbar Drawer (Screens <= 1024px / up to 1199.98px) */
+@media (max-width: 1199.98px) {
   .navbar-collapse-custom {
     background-color: var(--bg-surface);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-    padding: 1rem;
+    padding: 1.25rem;
     margin-top: 0.75rem;
     box-shadow: var(--shadow-lg);
     max-height: calc(100vh - 90px);
@@ -525,12 +580,12 @@ img {
   }
 
   .navbar-actions-mobile {
-    margin-top: 0.75rem;
-    padding-top: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
     border-top: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.75rem;
   }
 }
 
@@ -1266,23 +1321,32 @@ img {
 }
 
 /* ==========================================================================
-   11. Footer & Back-To-Top
+   11. Footer & Back-To-Top (White Background in Light Mode)
    ========================================================================== */
 .site-footer {
-  background-color: var(--bg-navy);
-  color: #CBD5E1;
+  background-color: var(--bg-footer);
+  color: var(--text-footer-secondary);
   padding-top: var(--space-10);
   padding-bottom: var(--space-6);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--border-footer);
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
 .site-footer h5,
 .site-footer h6 {
-  color: #FFFFFF;
+  color: var(--text-footer-primary);
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1rem;
   margin-bottom: var(--space-4);
+}
+
+.site-footer .brand-name {
+  color: var(--text-footer-primary) !important;
+}
+
+.site-footer p {
+  color: var(--text-footer-muted);
 }
 
 .footer-links {
@@ -1296,7 +1360,7 @@ img {
 }
 
 .footer-links a {
-  color: #94A3B8;
+  color: var(--text-footer-secondary);
   font-size: 0.925rem;
   transition: color var(--transition-fast), transform var(--transition-fast);
   display: inline-flex;
@@ -1305,7 +1369,7 @@ img {
 }
 
 .footer-links a:hover {
-  color: #38BDF8;
+  color: var(--accent-primary);
   transform: translateX(3px);
 }
 
@@ -1315,30 +1379,30 @@ img {
   gap: 0.75rem;
   margin-bottom: 0.85rem;
   font-size: 0.925rem;
-  color: #CBD5E1;
+  color: var(--text-footer-secondary);
 }
 
 .footer-contact-item i {
-  color: #38BDF8;
+  color: var(--accent-primary);
   font-size: 1.05rem;
   margin-top: 0.15rem;
 }
 
 .footer-contact-item a {
-  color: #CBD5E1;
+  color: var(--text-footer-secondary);
 }
 
 .footer-contact-item a:hover {
-  color: #38BDF8;
+  color: var(--accent-primary);
 }
 
 .footer-disclaimer {
-  background-color: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: var(--bg-footer-disclaimer);
+  border: 1px solid var(--border-footer);
   border-radius: var(--radius-md);
   padding: 0.875rem 1.25rem;
   font-size: 0.8125rem;
-  color: #94A3B8;
+  color: var(--text-footer-muted);
   margin-top: var(--space-6);
 }
 
@@ -1346,19 +1410,35 @@ img {
   width: 38px;
   height: 38px;
   border-radius: var(--radius-sm);
-  background-color: rgba(255, 255, 255, 0.08);
-  color: #F8FAFC !important;
+  background-color: var(--bg-surface-alt);
+  color: var(--text-footer-primary) !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--border-footer);
   transition: all var(--transition-fast);
 }
 
 .social-icon-btn:hover {
   background-color: var(--accent-primary);
   border-color: var(--accent-primary);
+  color: #FFFFFF !important;
   transform: translateY(-2px);
+}
+
+.footer-bottom-strip {
+  border-top: 1px solid var(--border-footer) !important;
+  font-size: 0.85rem;
+  color: var(--text-footer-muted);
+}
+
+.footer-bottom-strip a {
+  color: var(--text-footer-muted);
+  transition: color var(--transition-fast);
+}
+
+.footer-bottom-strip a:hover {
+  color: var(--accent-primary);
 }
 
 .back-to-top {
@@ -1459,5 +1539,150 @@ img {
 
 [data-theme="dark"] .map-frame-wrapper iframe {
   filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+/* ==========================================================================
+   12. Tablet & 1024px Views: 2 Cards per Row + Centered Last Odd Card
+   Applies in tab and 1024px views (768px to 1024.98px) in all pages and all sections
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 1024.98px) {
+  /* Ensure parent row wraps and centers orphan items */
+  .row:has(> [class*="col-"] > .surface-card),
+  .row:has(> [class*="col-"] > .service-detail-card),
+  .row:has(> [class*="col-"] > .pricing-category-card),
+  .row:has(> [class*="col-"] > .bento-card),
+  .row:has(> [class*="col-"] > .process-step-card),
+  .row:has(> [class*="col-"] > .testimonial-card),
+  .tab-grid-2 {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
+  /* Force 2 cards per row (50% column width each) */
+  .row:has(> [class*="col-"] > .surface-card) > [class*="col-"],
+  .row:has(> [class*="col-"] > .service-detail-card) > [class*="col-"],
+  .row:has(> [class*="col-"] > .pricing-category-card) > [class*="col-"],
+  .row:has(> [class*="col-"] > .bento-card) > [class*="col-"],
+  .row:has(> [class*="col-"] > .process-step-card) > [class*="col-"],
+  .row:has(> [class*="col-"] > .testimonial-card) > [class*="col-"],
+  .tab-grid-2 > [class*="col-"] {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
+  /* Align last odd card in center if odd number of cards */
+  .row:has(> [class*="col-"] > .surface-card) > [class*="col-"]:last-child:nth-child(odd),
+  .row:has(> [class*="col-"] > .service-detail-card) > [class*="col-"]:last-child:nth-child(odd),
+  .row:has(> [class*="col-"] > .pricing-category-card) > [class*="col-"]:last-child:nth-child(odd),
+  .row:has(> [class*="col-"] > .bento-card) > [class*="col-"]:last-child:nth-child(odd),
+  .row:has(> [class*="col-"] > .process-step-card) > [class*="col-"]:last-child:nth-child(odd),
+  .row:has(> [class*="col-"] > .testimonial-card) > [class*="col-"]:last-child:nth-child(odd),
+  .tab-grid-2 > [class*="col-"]:last-child:nth-child(odd) {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* ==========================================================================
+   13. Complete RTL Layout Support
+   ========================================================================== */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .dropdown-menu {
+  text-align: right;
+  left: auto !important;
+  right: 0 !important;
+}
+
+[dir="rtl"] .dropdown-chevron {
+  margin-right: 0.35rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .navbar-brand-custom {
+  letter-spacing: normal;
+}
+
+[dir="rtl"] .footer-links a {
+  flex-direction: row;
+}
+
+[dir="rtl"] .footer-links a:hover {
+  transform: translateX(-3px);
+}
+
+[dir="rtl"] .footer-links a i {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .back-to-top {
+  right: auto;
+  left: 1.5rem;
+}
+
+[dir="rtl"] .hero-floating-card.card-top-left {
+  left: auto;
+  right: -1.25rem;
+}
+
+[dir="rtl"] .hero-floating-card.card-bottom-right {
+  right: auto;
+  left: -1.25rem;
+}
+
+[dir="rtl"] .service-rate-tag {
+  right: auto;
+  left: 0.75rem;
+}
+
+[dir="rtl"] .popular-badge {
+  letter-spacing: normal;
+}
+
+[dir="rtl"] .breadcrumb-custom {
+  direction: rtl;
+}
+
+[dir="rtl"] .breadcrumb-custom i {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 992px) {
+  [dir="rtl"] .text-lg-end {
+    text-align: left !important;
+  }
+}
+
+[dir="rtl"] .me-1, [dir="rtl"] .me-2, [dir="rtl"] .me-3 {
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important;
+}
+
+[dir="rtl"] .ms-auto {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+[dir="rtl"] .me-auto {
+  margin-right: 0 !important;
+  margin-left: auto !important;
+}
+
+[dir="rtl"] .ps-3 {
+  padding-left: 0 !important;
+  padding-right: 1rem !important;
 }
 

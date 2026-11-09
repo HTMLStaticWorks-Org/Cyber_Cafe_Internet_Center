@@ -6,6 +6,10 @@
   <meta name="description" content="Contact NexusDesk Digital & Document Center — Location address, directions map, opening hours, WhatsApp file transfer number, phone desk, and service enquiry form." />
   <title>Contact, Location &amp; Opening Hours | NexusDesk Digital &amp; Document Center</title>
 
+  <!-- Favicon matching Navbar Brand Icon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml" />
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,7 +28,7 @@
        MANDATORY STICKY NAVBAR
        ==================================================================== -->
   <header class="site-header">
-    <nav class="navbar navbar-expand-lg navbar-custom" aria-label="Main Navigation">
+    <nav class="navbar navbar-expand-xl navbar-custom" aria-label="Main Navigation">
       <div class="container">
         <a class="navbar-brand-custom" href="index.html">
           <span class="brand-mark"><i class="bi bi-pc-display-horizontal"></i></span>
@@ -34,14 +38,9 @@
           </span>
         </a>
 
-        <div class="d-flex align-items-center gap-2 d-lg-none">
-          <button type="button" class="btn-theme-toggle js-theme-toggle" aria-label="Switch theme">
-            <i class="bi bi-moon-stars-fill"></i>
-          </button>
-          <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarCollapse" aria-controls="mainNavbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-list"></i>
-          </button>
-        </div>
+        <button class="navbar-toggler navbar-toggler-custom d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarCollapse" aria-controls="mainNavbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+        </button>
 
         <div class="collapse navbar-collapse navbar-collapse-custom" id="mainNavbarCollapse">
           <ul class="navbar-nav mx-auto">
@@ -85,7 +84,8 @@
             </li>
           </ul>
 
-          <div class="d-none d-lg-flex align-items-center gap-2">
+          <div class="d-none d-xl-flex align-items-center gap-2">
+            <button type="button" class="btn-theme-toggle js-rtl-toggle" aria-label="Toggle text direction" title="Toggle RTL / LTR layout">RTL</button>
             <button type="button" class="btn-theme-toggle js-theme-toggle" aria-label="Switch theme">
               <i class="bi bi-moon-stars-fill"></i>
             </button>
@@ -95,7 +95,16 @@
             </a>
           </div>
 
-          <div class="navbar-actions-mobile d-lg-none">
+          <div class="navbar-actions-mobile d-xl-none">
+            <div class="d-flex align-items-center justify-content-between p-2 mb-3 rounded-3" style="background: var(--bg-surface-alt); border: 1px solid var(--border-color);">
+              <span class="small fw-semibold">Preferences</span>
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="btn-theme-toggle js-rtl-toggle" aria-label="Toggle text direction" title="Toggle RTL / LTR layout">RTL</button>
+                <button type="button" class="btn-theme-toggle js-theme-toggle" aria-label="Switch theme">
+                  <i class="bi bi-moon-stars-fill"></i>
+                </button>
+              </div>
+            </div>
             <a href="contact.html" class="btn-brand w-100">
               <span>Get in Touch</span>
               <i class="bi bi-arrow-up-right"></i>
@@ -158,7 +167,7 @@
     <section class="section-padding-sm">
       <div class="container">
         <!-- NOTE FOR BUSINESS OWNER: Edit placeholder contact info below or in assets/js/main.js SITE_CONFIG -->
-        <div class="row g-4">
+        <div class="row g-4 tab-grid-2">
           <!-- Address Card -->
           <div class="col-md-6 col-xl-3 js-reveal">
             <div class="surface-card d-flex flex-column justify-content-between">
@@ -482,7 +491,7 @@
           <a class="d-inline-flex align-items-center gap-2 text-decoration-none mb-3" href="index.html">
             <span class="brand-mark"><i class="bi bi-pc-display-horizontal"></i></span>
             <span class="brand-text-wrap">
-              <span class="brand-name text-white">NexusDesk</span>
+              <span class="brand-name">NexusDesk</span>
               <span class="brand-tag">Digital &amp; Document Center</span>
             </span>
           </a>
@@ -546,7 +555,7 @@
         <strong>Independent Service Center Disclaimer:</strong> NexusDesk Digital &amp; Document Center is a privately operated commercial internet, printing, and documentation assistance facility. We do not represent, and are not affiliated with, any government authority, examination board, or official agency. All service charges listed are solely for computer access, printing, scanning, and operator typing support.
       </div>
 
-      <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between pt-4 mt-4 border-top" style="border-color: rgba(255,255,255,0.08) !important; font-size: 0.85rem; color: #64748B;">
+      <div class="footer-bottom-strip d-flex flex-column flex-sm-row align-items-center justify-content-between pt-4 mt-4 border-top">
         <div>&copy; 2026 NexusDesk Digital &amp; Document Center. All rights reserved.</div>
         <div class="mt-2 mt-sm-0">
           <a href="rates.html" class="text-secondary me-3">Transparent Rates</a>
