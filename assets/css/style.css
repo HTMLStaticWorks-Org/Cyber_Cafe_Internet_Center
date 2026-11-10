@@ -723,7 +723,7 @@ img {
   padding-bottom: var(--space-10);
   background-color: var(--bg-body);
   background-image:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(240, 246, 255, 0.90) 50%, rgba(255, 255, 255, 0.95) 100%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.82) 0%, rgba(240, 246, 255, 0.72) 50%, rgba(255, 255, 255, 0.84) 100%),
     radial-gradient(circle at 85% 15%, var(--accent-primary-soft) 0%, transparent 45%),
     url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1920&q=80');
   background-size: cover;
@@ -913,9 +913,9 @@ img {
   padding-bottom: var(--space-8);
   background-color: var(--bg-surface-alt);
   background-image:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(241, 245, 249, 0.90) 50%, rgba(255, 255, 255, 0.96) 100%),
-    radial-gradient(circle at 90% 20%, var(--accent-primary-soft) 0%, transparent 45%),
-    url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920&q=80');
+    linear-gradient(135deg, rgba(255, 255, 255, 0.78) 0%, rgba(240, 246, 255, 0.68) 50%, rgba(255, 255, 255, 0.82) 100%),
+    radial-gradient(circle at 90% 20%, rgba(0, 102, 255, 0.14) 0%, transparent 45%),
+    url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1920&q=80');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -925,9 +925,9 @@ img {
 [data-theme="dark"] .page-hero {
   background-color: var(--bg-surface-alt);
   background-image:
-    linear-gradient(135deg, rgba(10, 16, 29, 0.95) 0%, rgba(15, 27, 46, 0.91) 50%, rgba(10, 16, 29, 0.96) 100%),
-    radial-gradient(circle at 90% 20%, rgba(0, 102, 255, 0.2) 0%, transparent 45%),
-    url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920&q=80');
+    linear-gradient(135deg, rgba(10, 16, 29, 0.93) 0%, rgba(15, 27, 46, 0.88) 50%, rgba(10, 16, 29, 0.94) 100%),
+    radial-gradient(circle at 90% 20%, rgba(0, 102, 255, 0.22) 0%, transparent 45%),
+    url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1920&q=80');
 }
 
 .breadcrumb-custom {
@@ -948,6 +948,45 @@ img {
 
 .breadcrumb-custom a:hover {
   color: var(--accent-primary);
+}
+
+/* Non-Home Pages: Center Buttons in Hero Section in Tab & 1024px */
+@media (min-width: 768px) and (max-width: 1024.98px) {
+  .page-hero .row {
+    text-align: center;
+  }
+
+  .page-hero .breadcrumb-custom {
+    justify-content: center;
+  }
+
+  .page-hero .col-lg-8,
+  .page-hero .col-12.col-xl-7 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-hero .page-hero-actions,
+  .page-hero .text-lg-end {
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-top: 1.25rem;
+  }
+
+  .page-hero .page-hero-actions .d-inline-flex,
+  .page-hero .text-lg-end .d-inline-flex {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .page-hero .page-hero-actions a,
+  .page-hero .text-lg-end a {
+    margin: 0.25rem;
+  }
 }
 
 /* ==========================================================================
@@ -1918,6 +1957,26 @@ img {
   /* Surface Cards on Mobile */
   .surface-card {
     padding: 1.25rem;
+  }
+
+  /* Home 2 Bento Zone B & Mobile Refinements */
+  .bento-card {
+    padding: 1.25rem !important;
+    border-radius: var(--radius-lg) !important;
+  }
+
+  .bento-card h3.h4 {
+    font-size: 1.2rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .bento-card .bento-card-thumb {
+    height: 150px !important;
+  }
+
+  .bento-card .badge {
+    font-size: 0.72rem !important;
+    padding: 0.25rem 0.55rem !important;
   }
 }
 
