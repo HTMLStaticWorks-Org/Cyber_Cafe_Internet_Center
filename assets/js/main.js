@@ -493,27 +493,69 @@ const SITE_CONFIG = {
     }
 
     /* ======================================================================
-       8. Subtle GSAP Scroll Animations (Progressive & Performance-Conscious)
+       8. Fluid GSAP & CSS Section Reveal Animations (Performance-Conscious)
        ====================================================================== */
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!prefersReducedMotion && window.gsap && window.ScrollTrigger) {
-      gsap.registerPlugin(ScrollTrigger);
+    if (!prefersReducedMotion) {
+      if (window.gsap && window.ScrollTrigger) {
+        gsap.registerPlugin(ScrollTrigger);
 
-      const revealElements = document.querySelectorAll(".js-reveal");
-      revealElements.forEach((el) => {
-        gsap.from(el, {
-          y: 22,
-          opacity: 0,
-          duration: 0.65,
-          ease: "power2.out",
-          clearProps: "all",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 90%",
-            toggleActions: "play none none none"
+        // Hero Entrance Animation on Home 1 & Home 2
+        const heroSection = document.querySelector(".hero-home-1, .hero-home-2");
+        if (heroSection) {
+          gsap.from(heroSection.querySelectorAll(".eyebrow-badge, .display-title, .section-subtitle, .d-flex.flex-wrap, .row.g-3"), {
+            y: 24,
+            opacity: 0,
+            duration: 0.75,
+            stagger: 0.1,
+            ease: "power2.out",
+            clearProps: "all"
+          });
+
+          const heroVisual = heroSection.querySelector(".hero-visual-frame, .tech-terminal-card");
+          if (heroVisual) {
+            gsap.from(heroVisual, {
+              y: 30,
+              opacity: 0,
+              duration: 0.85,
+              delay: 0.25,
+              ease: "power2.out",
+              clearProps: "all"
+            });
           }
+        }
+
+        // Section Cards Staggered Scroll Reveal
+        const revealElements = document.querySelectorAll(".js-reveal");
+        revealElements.forEach((el) => {
+          gsap.from(el, {
+            y: 28,
+            opacity: 0,
+            duration: 0.7,
+            ease: "power2.out",
+            clearProps: "all",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 88%",
+              toggleActions: "play none none none"
+            }
+          });
         });
-      });
+      } else {
+        // Fallback IntersectionObserver if GSAP is unavailable
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll(".js-reveal").forEach((el) => {
+          observer.observe(el);
+        });
+      }
     }
   });
 })();

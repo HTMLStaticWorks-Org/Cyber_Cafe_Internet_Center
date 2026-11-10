@@ -82,14 +82,14 @@
               <a class="nav-link" href="services.html">Services</a>
             </li>
 
-            <!-- 3. Rates -->
-            <li class="nav-item">
-              <a class="nav-link" href="rates.html">Rates</a>
-            </li>
-
-            <!-- 4. About -->
+            <!-- 3. About (3rd in Nav) -->
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <!-- 4. Rates -->
+            <li class="nav-item">
+              <a class="nav-link" href="rates.html">Rates</a>
             </li>
 
             <!-- 5. Contact -->
@@ -139,7 +139,7 @@
       <div class="container">
         <div class="row align-items-center g-5">
           <!-- Left Column: High-Impact Tech Editorial Copy -->
-          <div class="col-lg-7">
+          <div class="col-12 col-xl-7">
             <div class="eyebrow-badge eyebrow-on-navy">
               <span class="status-dot"></span>
               <span class="font-mono">TERMINAL HUB v2.6 • MG ROAD BENGALURU</span>
@@ -184,8 +184,8 @@
             </div>
           </div>
 
-          <!-- Right Column: Live Center Capabilities & Express Rate Terminal -->
-          <div class="col-lg-5">
+          <!-- Right Column: Live Center Capabilities & Express Rate Terminal (Big Card: 100% on Tab/1024px) -->
+          <div class="col-12 col-xl-5 card-big hero-card-col">
             <div class="tech-terminal-card">
               <div class="terminal-header">
                 <div class="terminal-dots">
@@ -277,9 +277,9 @@
           </div>
         </div>
 
-        <!-- Bento Row 1: 7 Col + 5 Col -->
-        <div class="row g-4 mb-4 tab-grid-2">
-          <div class="col-lg-7 js-reveal">
+        <!-- Bento Row 1: Big Cards (100% on Tab/1024px, 7 Col + 5 Col on Desktop) -->
+        <div class="row g-4 mb-4">
+          <div class="col-12 col-xl-7 js-reveal card-big bento-big-col">
             <div class="bento-card d-flex flex-column justify-content-between">
               <div>
                 <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
@@ -314,7 +314,7 @@
                 </div>
               </div>
               <div class="row align-items-center g-3 pt-3 border-top" style="border-color: var(--border-color) !important;">
-                <div class="col-sm-7">
+                <div class="col-12 col-md-7">
                   <img
                     src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
                     alt="Digital workstation technology display"
@@ -322,7 +322,7 @@
                     style="height: 145px; object-fit: cover;"
                   />
                 </div>
-                <div class="col-sm-5 text-sm-end">
+                <div class="col-12 col-md-5 text-md-end">
                   <div class="small text-muted mb-1">Standard Access Rate</div>
                   <div class="font-mono h4 fw-bold text-primary mb-2">₹25 <span class="fs-6 text-muted">/ Hour</span></div>
                   <a href="services.html#internet-services" class="btn-brand w-100">View Specs</a>
@@ -331,29 +331,32 @@
             </div>
           </div>
 
-          <div class="col-lg-5 js-reveal">
-            <div class="bento-card bento-dark d-flex flex-column justify-content-between">
+          <div class="col-12 col-xl-5 js-reveal card-big bento-big-col">
+            <div class="bento-card bento-dark d-flex flex-column justify-content-between h-100">
               <div>
                 <div class="d-flex align-items-center justify-content-between mb-3">
                   <span class="eyebrow-badge eyebrow-on-navy mb-0">ZONE B • FORM DESK</span>
                   <span class="font-mono small text-info">Dual-Monitor Setup</span>
                 </div>
-                <h3 class="h3 fw-bold mb-2">1-on-1 Guided Online Application Assistance</h3>
-                <p class="small mb-4">
+                <div class="rounded-3 overflow-hidden mb-3" style="height: 140px; border: 1px solid rgba(255,255,255,0.12);">
+                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                    alt="Assisted documentation and application verification operator" class="w-100 h-100 object-fit-cover" loading="lazy" />
+                </div>
+                <h3 class="h4 fw-bold mb-2">1-on-1 Guided Online Application Assistance</h3>
+                <p class="small mb-3">
                   Sit at our dual-screen customer verification counter. As our specialist fills out your form, crops your photo/signature, and uploads PDFs, you watch and verify every character in real time on a facing monitor.
                 </p>
-                <div class="d-flex flex-wrap gap-2 mb-4">
-                  <span class="badge rounded-pill bg-info bg-opacity-10 text-info border border-info border-opacity-25 px-3 py-2">University Admissions</span>
-                  <span class="badge rounded-pill bg-info bg-opacity-10 text-info border border-info border-opacity-25 px-3 py-2">Competitive Exams</span>
-                  <span class="badge rounded-pill bg-info bg-opacity-10 text-info border border-info border-opacity-25 px-3 py-2">Job Portals</span>
-                  <span class="badge rounded-pill bg-info bg-opacity-10 text-info border border-info border-opacity-25 px-3 py-2">Citizen Services</span>
-                  <span class="badge rounded-pill bg-info bg-opacity-10 text-info border border-info border-opacity-25 px-3 py-2">Resume Support</span>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge rounded-pill bg-info bg-opacity-10 text-info border border-info border-opacity-25 px-2 py-1 small">Admissions</span>
+                  <span class="badge rounded-pill bg-info bg-opacity-10 text-info border border-info border-opacity-25 px-2 py-1 small">Govt &amp; Job Exams</span>
+                  <span class="badge rounded-pill bg-info bg-opacity-10 text-info border border-info border-opacity-25 px-2 py-1 small">Citizen Portals</span>
+                  <span class="badge rounded-pill bg-info bg-opacity-10 text-info border border-info border-opacity-25 px-2 py-1 small">Resume Resizing</span>
                 </div>
               </div>
 
-              <div class="p-3 rounded-3" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);">
+              <div class="p-3 rounded-3 mt-2" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);">
                 <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="small text-white fw-semibold">Operator Assistance Charge</span>
+                  <span class="small text-white fw-semibold">Operator Typing Charge</span>
                   <span class="font-mono fw-bold text-info">From ₹50 / Form</span>
                 </div>
                 <a href="services.html#application-services" class="btn-on-navy-outline w-100 btn-sm py-2">
@@ -365,16 +368,21 @@
           </div>
         </div>
 
-        <!-- Bento Row 2: 4 Col + 4 Col + 4 Col (Print, Scan, PDF Studio) -->
+        <!-- Bento Row 2: 4 Col + 4 Col + 4 Col (Print, Scan, PDF Studio) with Visual Cards -->
         <div class="row g-4 tab-grid-2">
           <div class="col-md-4 js-reveal">
-            <div class="bento-card">
-              <div class="icon-box"><i class="bi bi-printer-fill"></i></div>
-              <span class="font-mono small text-muted d-block mb-1">ZONE C.1 // LASER OUTPUT</span>
-              <h3 class="h5 fw-bold">B&amp;W &amp; Color Laser Printing</h3>
-              <p class="small">
-                Print from USB, email, or WhatsApp. Available in 75 GSM everyday paper, 100 GSM bond, glossy photo sheets, and 250 GSM certificate cardstock.
-              </p>
+            <div class="bento-card h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="rounded-3 overflow-hidden mb-3" style="height: 130px; border: 1px solid var(--border-color);">
+                  <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+                    alt="High speed commercial monochrome and color laser printer" class="w-100 h-100 object-fit-cover" loading="lazy" />
+                </div>
+                <span class="font-mono small text-muted d-block mb-1">ZONE C.1 // LASER OUTPUT</span>
+                <h3 class="h5 fw-bold">B&amp;W &amp; Color Laser Printing</h3>
+                <p class="small text-muted mb-3">
+                  Print from USB, email, or WhatsApp. Available in 75 GSM everyday paper, 100 GSM bond, glossy photo sheets, and 250 GSM certificate cardstock.
+                </p>
+              </div>
               <div class="d-flex align-items-center justify-content-between pt-3 border-top" style="border-color: var(--border-color) !important;">
                 <span class="font-mono small fw-bold text-primary">₹3 B&amp;W • ₹10 Color</span>
                 <a href="services.html#printing-services" class="small fw-semibold">Details <i class="bi bi-arrow-right"></i></a>
@@ -383,13 +391,18 @@
           </div>
 
           <div class="col-md-4 js-reveal">
-            <div class="bento-card">
-              <div class="icon-box icon-cyan"><i class="bi bi-files"></i></div>
-              <span class="font-mono small text-muted d-block mb-1">ZONE C.2 // HIGH-VOLUME XEROX</span>
-              <h3 class="h5 fw-bold">Duplex Photocopying</h3>
-              <p class="small">
-                High-speed 60-PPM copying for textbooks, legal dockets, notes, and ID cards. Special discounted per-page slabs for 100+ page batches.
-              </p>
+            <div class="bento-card h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="rounded-3 overflow-hidden mb-3" style="height: 130px; border: 1px solid var(--border-color);">
+                  <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80"
+                    alt="High-volume duplex photocopying and xerox station" class="w-100 h-100 object-fit-cover" loading="lazy" />
+                </div>
+                <span class="font-mono small text-muted d-block mb-1">ZONE C.2 // HIGH-VOLUME XEROX</span>
+                <h3 class="h5 fw-bold">Duplex Photocopying</h3>
+                <p class="small text-muted mb-3">
+                  High-speed 60-PPM copying for textbooks, legal dockets, notes, and ID cards. Special discounted per-page slabs for 100+ page batches.
+                </p>
+              </div>
               <div class="d-flex align-items-center justify-content-between pt-3 border-top" style="border-color: var(--border-color) !important;">
                 <span class="font-mono small fw-bold text-primary">₹2 Single • ₹1.50 Bulk</span>
                 <a href="services.html#printing-services" class="small fw-semibold">Details <i class="bi bi-arrow-right"></i></a>
@@ -398,13 +411,18 @@
           </div>
 
           <div class="col-md-4 js-reveal">
-            <div class="bento-card">
-              <div class="icon-box"><i class="bi bi-file-earmark-pdf-fill"></i></div>
-              <span class="font-mono small text-muted d-block mb-1">ZONE C.3 // DIGITAL STUDIO</span>
-              <h3 class="h5 fw-bold">Scanning &amp; PDF Formatting</h3>
-              <p class="small">
-                Flatbed &amp; ADF multi-page scanning, OCR text recognition, Word-to-PDF conversion, page merging, and professional document formatting.
-              </p>
+            <div class="bento-card h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="rounded-3 overflow-hidden mb-3" style="height: 130px; border: 1px solid var(--border-color);">
+                  <img src="https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&w=600&q=80"
+                    alt="High-DPI flatbed and ADF scanning with PDF formatting" class="w-100 h-100 object-fit-cover" loading="lazy" />
+                </div>
+                <span class="font-mono small text-muted d-block mb-1">ZONE C.3 // DIGITAL STUDIO</span>
+                <h3 class="h5 fw-bold">Scanning &amp; PDF Formatting</h3>
+                <p class="small text-muted mb-3">
+                  Flatbed &amp; ADF multi-page scanning, OCR text recognition, Word-to-PDF conversion, page merging, and professional document formatting.
+                </p>
+              </div>
               <div class="d-flex align-items-center justify-content-between pt-3 border-top" style="border-color: var(--border-color) !important;">
                 <span class="font-mono small fw-bold text-primary">₹10 Scan • ₹15 PDF</span>
                 <a href="services.html#printing-services" class="small fw-semibold">Details <i class="bi bi-arrow-right"></i></a>
@@ -429,8 +447,8 @@
         </div>
 
         <div class="row g-4 align-items-stretch">
-          <!-- Left: Quick Rate Board -->
-          <div class="col-lg-6 js-reveal">
+          <!-- Left: Quick Rate Board (Big Card: 100% on Tab/1024px) -->
+          <div class="col-12 col-xl-6 js-reveal card-big">
             <div class="pricing-category-card popular-category h-100">
               <div class="pricing-card-header">
                 <div>
@@ -493,8 +511,8 @@
             </div>
           </div>
 
-          <!-- Right: Interactive Visit Cost Estimator -->
-          <div class="col-lg-6 js-reveal">
+          <!-- Right: Interactive Visit Cost Estimator (Big Card: 100% on Tab/1024px) -->
+          <div class="col-12 col-xl-6 js-reveal card-big estimator-panel-col">
             <div class="estimator-panel h-100 d-flex flex-column justify-content-between">
               <div>
                 <div class="d-flex align-items-center justify-content-between mb-3">
@@ -638,30 +656,30 @@
       <div class="container">
         <div class="p-4 p-lg-5 rounded-4 bg-navy">
           <div class="row align-items-center g-4">
-            <div class="col-lg-7">
+            <div class="col-12 col-xl-7 card-big location-card-col">
               <span class="eyebrow-badge eyebrow-on-navy"><i class="bi bi-broadcast"></i> Walk-In or Send Remotely</span>
               <h2 class="section-title mb-2">Ready to Visit or Send a File for Instant Printing?</h2>
               <p class="mb-3">
                 <strong>Address:</strong> Shop No. 14 &amp; 15, Ground Floor, Metro Plaza Commercial Complex, MG Road, Bengaluru 560001<br />
                 <strong>Hours:</strong> Mon–Sat: 08:00 AM – 09:30 PM &nbsp;|&nbsp; Sun: 09:30 AM – 06:00 PM
               </p>
-              <div class="d-flex flex-wrap gap-3">
-                <a href="https://wa.me/919876543210" data-config="whatsapp" class="btn-whatsapp">
+              <div class="d-flex flex-column flex-sm-row flex-wrap gap-2 gap-sm-3">
+                <a href="https://wa.me/919876543210" data-config="whatsapp" class="btn-whatsapp flex-grow-1 text-center justify-content-center">
                   <i class="bi bi-whatsapp"></i>
                   <span>WhatsApp: +91 98765 43210</span>
                 </a>
-                <a href="tel:+919876543210" data-config="phone" class="btn-on-navy-outline">
+                <a href="tel:+919876543210" data-config="phone" class="btn-on-navy-outline flex-grow-1 text-center justify-content-center">
                   <i class="bi bi-telephone-fill"></i>
                   <span>Call Desk</span>
                 </a>
-                <a href="https://www.google.com/maps/search/?api=1&query=MG+Road+Bengaluru+Karnataka+560001" data-config="directions" class="btn-on-navy-outline">
+                <a href="https://www.google.com/maps/search/?api=1&query=MG+Road+Bengaluru+Karnataka+560001" data-config="directions" class="btn-on-navy-outline flex-grow-1 text-center justify-content-center">
                   <i class="bi bi-geo-alt-fill"></i>
                   <span>Google Maps Route</span>
                 </a>
               </div>
             </div>
 
-            <div class="col-lg-5">
+            <div class="col-12 col-xl-5 card-big location-card-col">
               <div class="p-4 rounded-4" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14);">
                 <h3 class="h5 fw-bold mb-2">Express WhatsApp Print Protocol</h3>
                 <ol class="small mb-3 ps-3" style="color: #CBD5E1;">
@@ -686,8 +704,8 @@
        ==================================================================== -->
   <footer class="site-footer">
     <div class="container">
-      <div class="row g-4 pb-4">
-        <div class="col-lg-4 col-md-6">
+      <div class="row g-4 pb-4 footer-main-row">
+        <div class="col-xl-4 col-lg-6 col-md-6 col-12 footer-col-brand">
           <a class="d-inline-flex align-items-center gap-2 text-decoration-none mb-3" href="index.html">
             <span class="brand-mark"><i class="bi bi-pc-display-horizontal"></i></span>
             <span class="brand-text-wrap">
@@ -706,19 +724,19 @@
           </div>
         </div>
 
-        <div class="col-lg-2 col-md-6 col-6">
+        <div class="col-xl-2 col-lg-6 col-md-6 col-6 footer-col-nav">
           <h5>Navigation</h5>
           <ul class="footer-links">
             <li><a href="index.html"><i class="bi bi-chevron-right small"></i> Home 1 (Default)</a></li>
             <li><a href="home-2.html"><i class="bi bi-chevron-right small"></i> Home 2 (Tech Hub)</a></li>
             <li><a href="services.html"><i class="bi bi-chevron-right small"></i> All Services</a></li>
-            <li><a href="rates.html"><i class="bi bi-chevron-right small"></i> Rate Card (INR)</a></li>
             <li><a href="about.html"><i class="bi bi-chevron-right small"></i> About Center</a></li>
+            <li><a href="rates.html"><i class="bi bi-chevron-right small"></i> Rate Card (INR)</a></li>
             <li><a href="contact.html"><i class="bi bi-chevron-right small"></i> Contact &amp; Map</a></li>
           </ul>
         </div>
 
-        <div class="col-lg-3 col-md-6 col-6">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-6 footer-col-services">
           <h5>Core Services</h5>
           <ul class="footer-links">
             <li><a href="services.html#internet-services"><i class="bi bi-chevron-right small"></i> High-Speed Internet Access</a></li>
@@ -730,7 +748,7 @@
           </ul>
         </div>
 
-        <div class="col-lg-3 col-md-6">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12 footer-col-contact">
           <h5>Center Location</h5>
           <div class="footer-contact-item">
             <i class="bi bi-geo-alt-fill"></i>

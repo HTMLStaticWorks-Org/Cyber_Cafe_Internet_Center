@@ -721,12 +721,24 @@ img {
   position: relative;
   padding-top: var(--space-8);
   padding-bottom: var(--space-10);
-  background:
+  background-color: var(--bg-body);
+  background-image:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(240, 246, 255, 0.90) 50%, rgba(255, 255, 255, 0.95) 100%),
     radial-gradient(circle at 85% 15%, var(--accent-primary-soft) 0%, transparent 45%),
-    radial-gradient(circle at 10% 80%, var(--accent-cyan-soft) 0%, transparent 40%),
-    var(--bg-body);
+    url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   border-bottom: 1px solid var(--border-color);
   overflow: hidden;
+}
+
+[data-theme="dark"] .hero-home-1 {
+  background-color: var(--bg-navy);
+  background-image:
+    linear-gradient(135deg, rgba(10, 16, 29, 0.95) 0%, rgba(15, 23, 42, 0.91) 50%, rgba(10, 16, 29, 0.96) 100%),
+    radial-gradient(circle at 85% 15%, rgba(0, 102, 255, 0.2) 0%, transparent 45%),
+    url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1920&q=80');
 }
 
 .hero-visual-frame {
@@ -736,6 +748,12 @@ img {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.hero-visual-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 50px -12px rgba(0, 102, 255, 0.18);
 }
 
 .hero-main-img {
@@ -762,26 +780,54 @@ img {
   align-items: center;
   gap: 0.75rem;
   z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-floating-card:hover {
+  transform: scale(1.04);
+  box-shadow: var(--shadow-lg);
 }
 
 .hero-floating-card.card-top-left {
   top: 1.5rem;
   left: -1.25rem;
+  animation: heroFloatSlow 5s ease-in-out infinite;
 }
 
 .hero-floating-card.card-bottom-right {
   bottom: 1.5rem;
   right: -1.25rem;
+  animation: heroFloatReverse 6s ease-in-out infinite;
+}
+
+@keyframes heroFloatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes heroFloatReverse {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
 }
 
 @media (max-width: 991.98px) {
   .hero-floating-card.card-top-left {
     top: 1rem;
     left: 1rem;
+    animation: none;
   }
   .hero-floating-card.card-bottom-right {
     bottom: 1rem;
     right: 1rem;
+    animation: none;
   }
 }
 
@@ -790,6 +836,7 @@ img {
     position: static;
     margin-top: 0.75rem;
     width: 100%;
+    animation: none;
   }
 }
 
@@ -802,11 +849,13 @@ img {
   padding-bottom: var(--space-10);
   overflow: hidden;
   background-image:
-    radial-gradient(circle at 20% 20%, rgba(0, 102, 255, 0.22) 0%, transparent 45%),
-    radial-gradient(circle at 80% 75%, rgba(6, 182, 212, 0.18) 0%, transparent 45%),
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    linear-gradient(135deg, rgba(6, 12, 24, 0.93) 0%, rgba(10, 22, 40, 0.88) 60%, rgba(6, 12, 24, 0.95) 100%),
+    radial-gradient(circle at 20% 20%, rgba(0, 102, 255, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 75%, rgba(6, 182, 212, 0.22) 0%, transparent 50%),
+    url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .hero-home-2 h1,
@@ -821,13 +870,20 @@ img {
 }
 
 .tech-terminal-card {
-  background: rgba(15, 27, 46, 0.85);
+  background: rgba(15, 27, 46, 0.88);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.3);
   border-radius: var(--radius-lg);
   padding: var(--space-5);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
   color: #F8FAFC;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.tech-terminal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px rgba(0, 102, 255, 0.25);
+  border-color: rgba(56, 189, 248, 0.5);
 }
 
 .terminal-header {
@@ -855,11 +911,23 @@ img {
   position: relative;
   padding-top: var(--space-8);
   padding-bottom: var(--space-8);
-  background:
+  background-color: var(--bg-surface-alt);
+  background-image:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(241, 245, 249, 0.90) 50%, rgba(255, 255, 255, 0.96) 100%),
     radial-gradient(circle at 90% 20%, var(--accent-primary-soft) 0%, transparent 45%),
-    radial-gradient(circle at 10% 90%, var(--accent-cyan-soft) 0%, transparent 45%),
-    var(--bg-surface-alt);
+    url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .page-hero {
+  background-color: var(--bg-surface-alt);
+  background-image:
+    linear-gradient(135deg, rgba(10, 16, 29, 0.95) 0%, rgba(15, 27, 46, 0.91) 50%, rgba(10, 16, 29, 0.96) 100%),
+    radial-gradient(circle at 90% 20%, rgba(0, 102, 255, 0.2) 0%, transparent 45%),
+    url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920&q=80');
 }
 
 .breadcrumb-custom {
@@ -1171,9 +1239,39 @@ img {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: var(--space-5);
+  padding: var(--space-4);
   height: 100%;
   box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.process-step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-primary);
+}
+
+.process-step-thumb {
+  position: relative;
+  height: 160px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 0.85rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-surface-alt);
+}
+
+.process-step-thumb .process-step-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.process-step-card:hover .process-step-thumb .process-step-img {
+  transform: scale(1.05);
 }
 
 .step-number-pill {
@@ -1187,6 +1285,7 @@ img {
   border-radius: var(--radius-pill);
   display: inline-block;
   margin-bottom: var(--space-3);
+  backdrop-filter: blur(8px);
 }
 
 .testimonial-card {
@@ -1222,6 +1321,12 @@ img {
   border-bottom: 1px solid var(--border-color);
   font-size: 0.925rem;
   border-radius: var(--radius-sm);
+  gap: 1rem;
+}
+
+.schedule-row .font-mono {
+  white-space: nowrap !important;
+  flex-shrink: 0;
 }
 
 .schedule-row:last-child {
@@ -1441,6 +1546,58 @@ img {
   color: var(--accent-primary);
 }
 
+/* ==========================================================================
+   Footer Dedicated Alignment in Tab & 1024px Views (768px to 1199.98px)
+   - Balanced 2x2 grid (50% + 50% in Row 1, 50% + 50% in Row 2)
+   - Eliminates lopsided columns and cramped navigation links
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .site-footer .footer-main-row,
+  .site-footer .row.g-4.pb-4 {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  .site-footer .footer-col-brand,
+  .site-footer .footer-col-nav,
+  .site-footer .footer-col-services,
+  .site-footer .footer-col-contact,
+  .site-footer .footer-main-row > [class*="col-"],
+  .site-footer .row.g-4.pb-4 > [class*="col-"] {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
+  .site-footer .footer-col-brand,
+  .site-footer .footer-col-nav,
+  .site-footer .footer-main-row > [class*="col-"]:nth-child(1),
+  .site-footer .footer-main-row > [class*="col-"]:nth-child(2),
+  .site-footer .row.g-4.pb-4 > [class*="col-"]:nth-child(1),
+  .site-footer .row.g-4.pb-4 > [class*="col-"]:nth-child(2) {
+    margin-bottom: 2rem !important;
+  }
+
+  .site-footer .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .site-footer .footer-links a {
+    white-space: normal;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.92rem;
+  }
+
+  .site-footer .footer-contact-item {
+    font-size: 0.88rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
 .back-to-top {
   position: fixed;
   bottom: 1.5rem;
@@ -1542,49 +1699,225 @@ img {
 }
 
 /* ==========================================================================
-   12. Tablet & 1024px Views: 2 Cards per Row + Centered Last Odd Card
-   Applies in tab and 1024px views (768px to 1024.98px) in all pages and all sections
+   12. Tablet & 1024px Responsive Card Architecture:
+   - BIG CARDS: Always KEEP IN ONE ONE ROW (100% width each)!
+     Applies to: Service Enquiry Form, Weekly Operating Schedule,
+     Center Location & Storefront Card, Estimator Panel, Large Bento Cards,
+     Hero Cards, and Major 2-Column Split Sections.
+   - SMALL GRID CARDS (.tab-grid-2): 2 cards per row with centered odd card.
    ========================================================================== */
+
+/* BIG CARDS RULE: 100% width on tablet, 1024px, and mobile (ONE CARD PER ROW) */
+@media (max-width: 1199.98px) {
+  .card-big,
+  .form-card-col,
+  .schedule-card-col,
+  .location-card-col,
+  .estimator-panel-col,
+  .bento-big-col,
+  .hero-card-col,
+  .contact-form-section .card-big,
+  .contact-form-section .form-card-col,
+  .contact-form-section .schedule-card-col,
+  .contact-form-section [class*="col-xl-"],
+  .contact-form-section [class*="col-lg-"],
+  main .row:not(.tab-grid-2) > .col-xl-6,
+  main .row:not(.tab-grid-2) > .col-xl-7,
+  main .row:not(.tab-grid-2) > .col-xl-5,
+  main .row:not(.tab-grid-2) > .col-xl-8,
+  main .row:not(.tab-grid-2) > .col-xl-4,
+  main .row:not(.tab-grid-2) > .col-lg-6,
+  main .row:not(.tab-grid-2) > .col-lg-7,
+  main .row:not(.tab-grid-2) > .col-lg-5,
+  main .row:not(.tab-grid-2) > .col-lg-8,
+  main .row:not(.tab-grid-2) > .col-lg-4,
+  main .row:not(.tab-grid-2) > .col-lg-12,
+  main .row > .col-12.card-big {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+/* SMALL GRID CARDS: 2 Cards per Row in Tab & 1024px (768px to 1024.98px) */
 @media (min-width: 768px) and (max-width: 1024.98px) {
-  /* Ensure parent row wraps and centers orphan items */
-  .row:has(> [class*="col-"] > .surface-card),
-  .row:has(> [class*="col-"] > .service-detail-card),
-  .row:has(> [class*="col-"] > .pricing-category-card),
-  .row:has(> [class*="col-"] > .bento-card),
-  .row:has(> [class*="col-"] > .process-step-card),
-  .row:has(> [class*="col-"] > .testimonial-card),
-  .tab-grid-2 {
+  .row.tab-grid-2 {
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
   }
 
-  /* Force 2 cards per row (50% column width each) */
-  .row:has(> [class*="col-"] > .surface-card) > [class*="col-"],
-  .row:has(> [class*="col-"] > .service-detail-card) > [class*="col-"],
-  .row:has(> [class*="col-"] > .pricing-category-card) > [class*="col-"],
-  .row:has(> [class*="col-"] > .bento-card) > [class*="col-"],
-  .row:has(> [class*="col-"] > .process-step-card) > [class*="col-"],
-  .row:has(> [class*="col-"] > .testimonial-card) > [class*="col-"],
-  .tab-grid-2 > [class*="col-"] {
+  .row.tab-grid-2 > [class*="col-"]:not(.card-big):not(.form-card-col):not(.schedule-card-col):not(.location-card-col):not(.bento-big-col):not(.hero-card-col):not(.estimator-panel-col):not(.col-12):not(.col-lg-12):not(.col-xl-12) {
     flex: 0 0 50% !important;
     max-width: 50% !important;
     width: 50% !important;
   }
 
-  /* Align last odd card in center if odd number of cards */
-  .row:has(> [class*="col-"] > .surface-card) > [class*="col-"]:last-child:nth-child(odd),
-  .row:has(> [class*="col-"] > .service-detail-card) > [class*="col-"]:last-child:nth-child(odd),
-  .row:has(> [class*="col-"] > .pricing-category-card) > [class*="col-"]:last-child:nth-child(odd),
-  .row:has(> [class*="col-"] > .bento-card) > [class*="col-"]:last-child:nth-child(odd),
-  .row:has(> [class*="col-"] > .process-step-card) > [class*="col-"]:last-child:nth-child(odd),
-  .row:has(> [class*="col-"] > .testimonial-card) > [class*="col-"]:last-child:nth-child(odd),
-  .tab-grid-2 > [class*="col-"]:last-child:nth-child(odd) {
+  /* Center last odd card on small 2-card grids */
+  .row.tab-grid-2 > [class*="col-"]:not(.card-big):not(.form-card-col):not(.schedule-card-col):not(.location-card-col):not(.bento-big-col):not(.hero-card-col):not(.estimator-panel-col):not(.col-12):not(.col-lg-12):not(.col-xl-12):last-child:nth-child(odd) {
     flex: 0 0 50% !important;
     max-width: 50% !important;
     width: 50% !important;
     margin-left: auto !important;
     margin-right: auto !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     Rates Page: Dedicated Polish in Tab & 1024px Views
+     -------------------------------------------------------------------------- */
+  .pricing-category-card {
+    border-radius: var(--radius-md);
+  }
+
+  .pricing-card-header {
+    padding: 0.9rem 1.1rem !important;
+    gap: 0.5rem;
+  }
+
+  .pricing-card-header h2 {
+    font-size: 0.96rem !important;
+    line-height: 1.35;
+  }
+
+  .pricing-card-header .small.text-muted {
+    font-size: 0.74rem !important;
+    display: block;
+  }
+
+  .pricing-card-header .spec-pill {
+    font-size: 0.7rem !important;
+    padding: 0.2rem 0.5rem !important;
+    white-space: nowrap;
+  }
+
+  .rate-row {
+    padding: 0.75rem 1.1rem !important;
+    gap: 0.75rem !important;
+  }
+
+  .rate-item-title {
+    font-size: 0.86rem !important;
+    line-height: 1.35;
+  }
+
+  .rate-item-note {
+    font-size: 0.74rem !important;
+    line-height: 1.3;
+    margin-top: 2px;
+  }
+
+  .rate-price-badge {
+    font-size: 0.85rem !important;
+    padding: 0.28rem 0.55rem !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap;
+  }
+
+  .rate-unit {
+    font-size: 0.68rem !important;
+  }
+
+  /* Estimator Panel in Tab & 1024px */
+  .estimator-panel {
+    padding: 1.6rem !important;
+  }
+
+  .estimator-panel .form-label-custom {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.25rem;
+  }
+
+  .estimator-panel .form-control-custom {
+    font-size: 0.88rem !important;
+    padding: 0.45rem 0.65rem !important;
+  }
+
+  .estimator-panel .bg-navy {
+    padding: 1.5rem !important;
+  }
+
+  .estimator-panel .btn-whatsapp,
+  .estimator-panel .btn-on-navy-outline {
+    font-size: 0.82rem !important;
+    padding: 0.55rem 0.75rem !important;
+    text-align: center;
+  }
+
+  /* --------------------------------------------------------------------------
+     Contact Page: Dedicated Polish in Tab & 1024px Views
+     -------------------------------------------------------------------------- */
+  .schedule-row {
+    padding: 0.65rem 0.85rem !important;
+    font-size: 0.86rem;
+  }
+
+  .schedule-row .font-mono {
+    font-size: 0.82rem !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     Home 1 & Home 2: Dedicated Polish in Tab & 1024px Views
+     -------------------------------------------------------------------------- */
+  .tech-terminal-card {
+    padding: 1.35rem !important;
+  }
+
+  .bento-card {
+    padding: 1.4rem !important;
+  }
+
+  .hero-visual-frame {
+    margin-top: 1rem;
+  }
+}
+
+/* ==========================================================================
+   Mobile-Specific Refinements (Home 2, Contact Page, Rates Page)
+   ========================================================================== */
+@media (max-width: 767.98px) {
+  /* Contact Page Mobile */
+  .schedule-list,
+  .Schedule-list {
+    margin-bottom: 1.25rem;
+  }
+
+  .schedule-row {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0.55rem 0.75rem;
+    font-size: 0.84rem;
+  }
+
+  .schedule-row .font-mono {
+    font-size: 0.8rem !important;
+  }
+
+  /* Home 2 Mobile Fixes */
+  .tech-terminal-card {
+    padding: 1.15rem;
+  }
+
+  .tech-terminal-card .p-3 {
+    padding: 0.75rem !important;
+  }
+
+  .tech-terminal-card .fw-bold.small {
+    font-size: 0.82rem !important;
+  }
+
+  #calcBreakdownText {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.45;
+  }
+
+  .estimator-panel {
+    padding: 1.25rem;
+  }
+
+  /* Surface Cards on Mobile */
+  .surface-card {
+    padding: 1.25rem;
   }
 }
 
